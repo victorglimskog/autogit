@@ -17,6 +17,7 @@
   },
   "homepage": "https://github.com/victorglimskog/autogit#readme",
   "dependencies": {
+    "promisemaker": "^0.1.3",
     "simple-git": "^1.84.0"
   }
 }

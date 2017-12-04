@@ -1,7 +1,42 @@
 [
-    {"path": "reverse-proxy", "branch":"master"},
-    {"path": "cert-bot-helper", "branch":"master"},
-    {"path": "giphy-grid", "branch":"master"},
-    {"path": "small-node", "branch":"master"},
-    {"path": "petregister", "branch":"master"}
+    {
+        "path": "reverse-proxy",
+         "branch":"master",
+         "runCmds": [
+             "npm install",
+             "pm2 restart reverse-proxy --silent"
+         ]
+    },
+    {
+        "path": "cert-bot-helper",
+        "branch":"master",
+        "runCmds": [
+            "npm install",
+            "pm2 restart cert-bot-helper --silent"
+        ]
+    },
+    {
+        "path": "giphy-grid",
+        "branch":"master",
+        "runCmds": [
+            "npm install",
+            "pm2 restart giphy-grid --silent"
+        ]
+    },
+    {
+        "path": "small-node",
+        "branch":"master",
+        "runCmds": [
+            "npm install",
+            "pm2 restart small-node --silent"
+        ]
+    },
+    {
+        "path": "petregister",
+        "branch":"master",
+        "runCmds": [
+            "npm install",
+            "pm2 restart petregister --silent"
+        ]
+    }
 ]
