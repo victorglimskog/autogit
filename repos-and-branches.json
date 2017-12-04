@@ -1,0 +1,7 @@
+[
+    {"path": "reverse-proxy", "branch":"master"},
+    {"path": "cert-bot-helper", "branch":"master"},
+    {"path": "giphy-grid", "branch":"master"},
+    {"path": "small-node", "branch":"master"},
+    {"path": "petregister", "branch":"master"}
+]

@@ -1,0 +1,22 @@
+{
+  "name": "autogit",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/victorglimskog/autogit.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/victorglimskog/autogit/issues"
+  },
+  "homepage": "https://github.com/victorglimskog/autogit#readme",
+  "dependencies": {
+    "simple-git": "^1.84.0"
+  }
+}
