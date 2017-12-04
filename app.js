@@ -1,7 +1,7 @@
 const sgit = require ('simple-git/promise');
 const path = require('path');
 const pm = require('promisemaker')
-// promisify the whole exec lib and then require the exec part of it
+// promisify the whole exec lib and then require the exec part of child_process
 const exec = pm(require('child_process')).exec;
 
 const basePath  = '/var/www';
@@ -28,7 +28,7 @@ async function pull(repoDir, branch, runCmds) {
         console.log('pull-error: ', repoDir, branch, err);
     }
     if(changed && runCmds) {
-        runCmds.forEach(async function (command) {
+        for (let command of runCmds) {
             let err,result = await exec(command, {cwd: repoPath})
                 .catch((e) => err = e);
                 if (result) {
@@ -37,13 +37,13 @@ async function pull(repoDir, branch, runCmds) {
                 if (err) {
                     console.log('Error running ', command, '\n', err);
                 }
-        });
+        };
     }
 }
 // Every 10 seconds loop through our repos and
 // pull the latest commits
 setInterval(() => {
-    repo.forEach((repo) => {
+    repos.forEach((repo) => {
         pull(path.join(basePath, repo.path), repo.branch, repo.runCmds)
     });
 }, 10000);
