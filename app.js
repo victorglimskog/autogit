@@ -29,7 +29,7 @@ async function pull(repoDir, branch, runCmds) {
     }
     if(changed && runCmds) {
         for (let command of runCmds) {
-            let err,result = await exec(command, {cwd: repoPath})
+            let err,result = await exec(command, {cwd: repoDir})
                 .catch((e) => err = e);
                 if (result) {
                     console.log('Running ', command, '\n', result);
