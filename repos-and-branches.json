@@ -20,6 +20,7 @@
         "branch":"master",
         "runCmds": [
             "npm install",
+            "npm run build",
             "pm2 restart giphy-grid --silent"
         ]
     },
