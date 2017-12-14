@@ -28,6 +28,7 @@ async function pull(repoDir, branch, runCmds) {
         console.log('pull-error: ', repoDir, branch, err);
     }
     if(changed && runCmds) {
+        console.log('1: ', repoDir,'2: ', branch, '3: ', runCmds);
         for (let command of runCmds) {
             let err,result = await exec(command, {cwd: repoDir})
                 .catch((e) => err = e);
