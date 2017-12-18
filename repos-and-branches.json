@@ -16,7 +16,7 @@
         ]
     },
     {
-        "path": "giphy-grid",
+        "path": "github-battle",
         "branch":"master",
         "runCmds": [
             "npm install",
